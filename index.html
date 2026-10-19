@@ -625,7 +625,7 @@
 .sl-dot.active{background:#aa23ff}
 </style>
 <script>
-(function(){var box=document.querySelector('[data-slideshow]');if(!box)return;var slides=box.querySelectorAll('.sl-slide'),dots=box.querySelectorAll('.sl-dot'),i=0,n=slides.length;function go(k){slides[i].classList.remove('active');if(dots[i])dots[i].classList.remove('active');i=(k+n)%n;slides[i].classList.add('active');if(dots[i])dots[i].classList.add('active');}box.querySelector('.sl-prev').onclick=function(){go(i-1);};box.querySelector('.sl-next').onclick=function(){go(i+1);};setInterval(function(){go(i+1);},3000);})();
+(function(){var box=document.querySelector('[data-slideshow]');if(!box)return;var slides=box.querySelectorAll('.sl-slide'),dots=box.querySelectorAll('.sl-dot'),i=0,n=slides.length;function go(k){slides[i].classList.remove('active');dots[i].classList.remove('active');i=(k+n)%n;slides[i].classList.add('active');dots[i].classList.add('active');}box.querySelector('.sl-prev').onclick=function(){go(i-1);};box.querySelector('.sl-next').onclick=function(){go(i+1);};setInterval(function(){go(i+1);},3000);})();
 </script>
               <figcaption><span class="w-title">Thumbnail Design</span><span class="w-cat">YouTube</span></figcaption>
             </figure>
