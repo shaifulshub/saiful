@@ -631,7 +631,7 @@
   });
 })();
 </script>
-              <figcaption><span class="w-title">Flyer Design</span><span class="w-cat">Print &amp; Digital</span></figcaption>
+              <figcaption><span class="w-title">Flyer Design</span><span class="w-cat">Print & Digital</span></figcaption>
             </figure>
             <figure class="work-item">
               <div class="slot sl-show" data-slideshow>
@@ -721,7 +721,7 @@
               <figcaption><span class="w-title">Logo Design</span><span class="w-cat">Branding</span></figcaption>
             </figure>
             <figure class="work-item">
-              <div class="slot" data-slideshow>
+              <div class="slot sl-show" data-slideshow>
   <img class="sl-slide active" src="fashion1.jpg" alt="Fashion design 1">
   <img class="sl-slide" src="fashion2.jpg" alt="Fashion design 2">
   <img class="sl-slide" src="fashion3.jpg" alt="Fashion design 3">
@@ -776,26 +776,11 @@
     setInterval(function(){go(i+1);},3000);
   });
 })();
-(function(){
-  document.querySelectorAll('[data-slideshow]').forEach(function(box){
-    var slides=box.querySelectorAll('.sl-slide'),dots=box.querySelectorAll('.sl-dot'),i=0,n=slides.length;
-    if(!n)return;
-    function go(k){
-      slides[i].classList.remove('active');
-      if(dots[i])dots[i].classList.remove('active');
-      i=(k+n)%n;
-      slides[i].classList.add('active');
-      if(dots[i])dots[i].classList.add('active');
-    }
-    var prev=box.querySelector('.sl-prev'),next=box.querySelector('.sl-next');
-    if(prev)prev.onclick=function(){go(i-1);};
-    if(next)next.onclick=function(){go(i+1);};
-    setInterval(function(){go(i+1);},3000);
-  });
-})();
 </script>
-
-              <figcaption><span class="w-title">Fashion Design</span><span class="w-cat">Apparel</span></figcaption>
+            <figcaption>
+              <span class="w-title">Fashion Design</span>
+              <span class="w-cat">Apparel</span>
+            </figcaption>
             </figure>
             <figure class="work-item">
               <div class="slot" role="img" aria-label="Empty placeholder for a banner design project">
