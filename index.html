@@ -581,6 +581,8 @@
   <img class="sl-slide" src="thumb2.jpg" alt="Flyer design 2">
   <img class="sl-slide" src="thumb3.jpg" alt="Flyer design 3">
   <img class="sl-slide" src="thumb4.jpg" alt="Flyer design 4">
+  <img class="sl-slide" src="thumb5.jpg" alt="Flyer design 4">
+  <img class="sl-slide" src="thumb6.jpg" alt="Flyer design 4">
   <button class="sl-arrow sl-prev" type="button" aria-label="Ager design">‹</button>
   <button class="sl-arrow sl-next" type="button" aria-label="Porer design">›</button>
   <div class="sl-dots" aria-hidden="true"><span class="sl-dot active"></span><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span></div>
@@ -597,7 +599,23 @@
 .sl-dot.active{background:#aa23ff}
 </style>
 <script>
-(function(){var box=document.querySelector('[data-slideshow]');if(!box)return;var slides=box.querySelectorAll('.sl-slide'),dots=box.querySelectorAll('.sl-dot'),i=0,n=slides.length;function go(k){slides[i].classList.remove('active');dots[i].classList.remove('active');i=(k+n)%n;slides[i].classList.add('active');dots[i].classList.add('active');}box.querySelector('.sl-prev').onclick=function(){go(i-1);};box.querySelector('.sl-next').onclick=function(){go(i+1);};setInterval(function(){go(i+1);},3000);})();
+(function(){
+  document.querySelectorAll('[data-slideshow]').forEach(function(box){
+    var slides=box.querySelectorAll('.sl-slide'),dots=box.querySelectorAll('.sl-dot'),i=0,n=slides.length;
+    if(!n)return;
+    function go(k){
+      slides[i].classList.remove('active');
+      if(dots[i])dots[i].classList.remove('active');
+      i=(k+n)%n;
+      slides[i].classList.add('active');
+      if(dots[i])dots[i].classList.add('active');
+    }
+    var prev=box.querySelector('.sl-prev'),next=box.querySelector('.sl-next');
+    if(prev)prev.onclick=function(){go(i-1);};
+    if(next)next.onclick=function(){go(i+1);};
+    setInterval(function(){go(i+1);},3000);
+  });
+})();
 </script>
               <figcaption><span class="w-title">Flyer Design</span><span class="w-cat">Print &amp; Digital</span></figcaption>
             </figure>
