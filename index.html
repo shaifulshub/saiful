@@ -726,11 +726,13 @@
   <img class="sl-slide" src="fashion2.jpg" alt="Fashion design 2">
   <img class="sl-slide" src="fashion3.jpg" alt="Fashion design 3">
   <img class="sl-slide" src="fashion4.jpg" alt="Fashion design 4">
+  <img class="sl-slide" src="fashion5.jpg" alt="Fashion design 5">
+  <img class="sl-slide" src="fashion6.jpg" alt="Fashion design 6">
   <button class="sl-arrow sl-prev" type="button" aria-label="Ager design">‹</button>
   <button class="sl-arrow sl-next" type="button" aria-label="Porer design">›</button>
   <div class="sl-dots" aria-hidden="true"><span class="sl-dot active"></span><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span></div>
 </div>
-                <style>
+<style>
   .slot-flyer {
   aspect-ratio: auto;
   height: 430px;
@@ -774,8 +776,6 @@
     setInterval(function(){go(i+1);},3000);
   });
 })();
-</script>
-                <script>
 (function(){
   document.querySelectorAll('[data-slideshow]').forEach(function(box){
     var slides=box.querySelectorAll('.sl-slide'),dots=box.querySelectorAll('.sl-dot'),i=0,n=slides.length;
