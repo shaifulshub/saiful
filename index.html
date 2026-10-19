@@ -721,10 +721,72 @@
               <figcaption><span class="w-title">Logo Design</span><span class="w-cat">Branding</span></figcaption>
             </figure>
             <figure class="work-item">
-              <div class="slot" role="img" aria-label="Empty placeholder for a fashion design project">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M3 17l5.5-4.5 4 3.5L17 12l4 3.5"/></svg>
-                <span class="slot-label">Add fashion design</span>
-              </div>
+              <<div class="slot" data-slideshow>
+  <img class="sl-slide active" src="fashion1.jpg" alt="Fashion design 1">
+  <img class="sl-slide" src="fashion2.jpg" alt="Fashion design 2">
+  <img class="sl-slide" src="fashion3.jpg" alt="Fashion design 3">
+  <img class="sl-slide" src="fashion4.jpg" alt="Fashion design 4">
+  <button class="sl-arrow sl-prev" type="button" aria-label="Ager design">‹</button>
+  <button class="sl-arrow sl-next" type="button" aria-label="Porer design">›</button>
+  <div class="sl-dots" aria-hidden="true"><span class="sl-dot active"></span><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span></div>
+</div>
+                <style>
+.sl-show{position:relative;overflow:hidden;padding:0;border-style:solid}
+.sl-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.sl-slide.active{opacity:1}
+.sl-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:none;background:rgba(22,3,34,.65);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:2}
+.sl-prev{left:10px}.sl-next{right:10px}
+.sl-arrow:hover{background:#aa23ff}
+.sl-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center;z-index:2}
+.sl-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45)}
+.sl-dot.active{background:#aa23ff}
+</style>
+<script>
+  <style>
+  .slot-flyer {
+  aspect-ratio: auto;
+  height: 430px;
+  padding: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #20063a;
+}
+.slot-flyer .sl-slide {
+  position: absolute;
+  inset: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  object-fit: contain;
+}
+.sl-show{position:relative;overflow:hidden;padding:0;border-style:solid}
+.sl-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.sl-slide.active{opacity:1}
+.sl-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:none;background:rgba(22,3,34,.65);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:2}
+.sl-prev{left:10px}.sl-next{right:10px}
+.sl-arrow:hover{background:#aa23ff}
+.sl-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center;z-index:2}
+.sl-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45)}
+.sl-dot.active{background:#aa23ff}
+</style>
+(function(){
+  document.querySelectorAll('[data-slideshow]').forEach(function(box){
+    var slides=box.querySelectorAll('.sl-slide'),dots=box.querySelectorAll('.sl-dot'),i=0,n=slides.length;
+    if(!n)return;
+    function go(k){
+      slides[i].classList.remove('active');
+      if(dots[i])dots[i].classList.remove('active');
+      i=(k+n)%n;
+      slides[i].classList.add('active');
+      if(dots[i])dots[i].classList.add('active');
+    }
+    var prev=box.querySelector('.sl-prev'),next=box.querySelector('.sl-next');
+    if(prev)prev.onclick=function(){go(i-1);};
+    if(next)next.onclick=function(){go(i+1);};
+    setInterval(function(){go(i+1);},3000);
+  });
+})();
+</script>
+
               <figcaption><span class="w-title">Fashion Design</span><span class="w-cat">Apparel</span></figcaption>
             </figure>
             <figure class="work-item">
