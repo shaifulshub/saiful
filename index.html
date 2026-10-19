@@ -586,20 +586,20 @@
   <button class="sl-arrow sl-prev" type="button" aria-label="Ager design">‹</button>
   <button class="sl-arrow sl-next" type="button" aria-label="Porer design">›</button>
   <div class="sl-dots" aria-hidden="true"><span class="sl-dot active"></span><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span></div>
-<style>
-  /* Flyer slot: tall frame so the full flyer fits */
 .slot-flyer {
-  aspect-ratio: 1 / 2;
-  padding: 0;
+  aspect-ratio: auto;
+  height: 430px;
+  padding: 12px;
   overflow: hidden;
   position: relative;
+  background: #20063a;
 }
 .slot-flyer .sl-slide {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  inset: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  object-fit: contain;
 }
 .sl-show{position:relative;overflow:hidden;padding:0;border-style:solid}
 .sl-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
