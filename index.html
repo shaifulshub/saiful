@@ -487,26 +487,43 @@
             </div>
           </div>
 
-          <aside class="id-card" aria-label="Profile summary">
-            <div class="id-top">
-              <img class="monogram" src="ChatGPT Image Sep 26, 2026, 01_08_03 PM.png" alt="Md Shaiful Islam" style="object-fit:cover;">
-              <div>
-                <div class="id-name">Md Shaiful Islam</div>
-                <div class="id-role">Graphic Designer · Video Editor</div>
-              </div>
-            </div>
-            <div class="id-rows">
-              <div class="id-row"><span class="k">Based in</span><span class="v">Dhaka, Bangladesh</span></div>
-              <div class="id-row"><span class="k">On Fiverr</span><span class="v">Seller since 2023</span></div>
-              <div class="id-row"><span class="k">Response time</span><span class="v">5 hr</span></div>
-              <div class="id-row"><span class="k">Works in</span><span class="v">Print · Digital · Video</span></div>
-            </div>
-            <div class="chips">
-              <span class="chip"><b>Ps</b>&nbsp; Photoshop</span>
-              <span class="chip"><b>Ai</b>&nbsp; Illustrator</span>
-              <span class="chip"><b>Pr</b>&nbsp; Premiere Pro</span>
-            </div>
-          </aside>
+         <aside class="pc-card" id="tiltCard" aria-label="Profile summary">
+  <div class="pc-photo">
+    <img src="my-photo.jpg" alt="Md Shaiful Islam">
+    <div class="pc-tag">
+      <span class="pc-role">DESIGNER</span>
+      <span class="pc-name">Md Shaiful Islam</span>
+    </div>
+  </div>
+  <div class="pc-rows">
+    <div class="pc-row"><span>Based in</span><b>Dhaka, Bangladesh</b></div>
+    <div class="pc-row"><span>On Fiverr</span><b>Seller since 2023</b></div>
+    <div class="pc-row"><span>Response time</span><b>5 hr</b></div>
+    <div class="pc-row"><span>Works in</span><b>Print · Digital · Video</b></div>
+  </div>
+  <div class="pc-chips">
+    <span class="pc-chip"><b>Ps</b> Photoshop</span>
+    <span class="pc-chip"><b>Ai</b> Illustrator</span>
+    <span class="pc-chip"><b>Pr</b> Premiere Pro</span>
+  </div>
+</aside>
+<style>
+.pc-card{background:rgba(255,255,255,.03);border:1px solid rgba(170,35,255,.35);border-radius:20px;padding:14px;box-shadow:0 0 44px rgba(170,35,255,.22);transition:transform .18s ease-out;will-change:transform}
+.pc-photo{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5}
+.pc-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.pc-tag{position:absolute;left:12px;bottom:12px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.pc-role{background:#aa23ff;color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:999px}
+.pc-name{background:rgba(10,2,18,.85);color:#fff;font-weight:700;font-size:15px;padding:5px 10px;border-radius:8px}
+.pc-rows{margin-top:14px;display:flex;flex-direction:column;gap:9px}
+.pc-row{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:#b9a8cc}
+.pc-row b{color:#fff;font-weight:600;text-align:right}
+.pc-chips{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.pc-chip{border:1px solid rgba(170,35,255,.4);color:#e9dcff;font-size:12.5px;padding:5px 10px;border-radius:999px}
+.pc-chip b{color:#aa23ff}
+</style>
+<script>
+(function(){var card=document.getElementById('tiltCard');if(!card)return;if(!window.matchMedia('(pointer:fine)').matches)return;if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;card.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5;var y=(e.clientY-r.top)/r.height-.5;card.style.transform='perspective(900px) rotateY('+(x*14).toFixed(2)+'deg) rotateX('+(-y*14).toFixed(2)+'deg)';});card.addEventListener('mouseleave',function(){card.style.transform='perspective(900px) rotateY(0deg) rotateX(0deg)';});})();
+</script>
         </div>
 
         <div class="stats">
